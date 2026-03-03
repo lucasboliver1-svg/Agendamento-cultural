@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda - Espaço Cultural</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Agenda Espaço Cultural Galpãozinho</h1>
+            <p>Reserve seu horário ou veja a disponibilidade.</p>
+        </header>
+
+        <section class="card">
+            <h2>Novo Agendamento</h2>
+            <form id="form-agendamento">
+                <label for="nome_grupo">Nome do Grupo / Responsável:</label>
+                <input type="text" id="nome_grupo" placeholder="Ex: Capoeira Mestre João" required>
+
+                <label for="atividade">Atividade:</label>
+                <input type="text" id="atividade" placeholder="Ex: Dança de Salão" required>
+
+                <label for="data_reserva">Data:</label>
+                <input type="date" id="data_reserva" required>
+
+                <label for="horario">Horário:</label>
+                <select id="horario" required>
+                    <option value="">Selecione um horário...</option>
+                    <option value="08:00 às 10:00">08:00 às 10:00</option>
+                    <option value="10:00 às 12:00">10:00 às 12:00</option>
+                    <option value="14:00 às 16:00">14:00 às 16:00</option>
+                    <option value="16:00 às 18:00">16:00 às 18:00</option>
+                    <option value="19:00 às 21:00">19:00 às 21:00</option>
+                </select>
+
+                <button type="submit">Agendar Horário</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Horários Reservados</h2>
+            <div id="lista-agendamentos" class="lista">
+                <p>Carregando agenda...</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
